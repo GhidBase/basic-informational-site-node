@@ -4,7 +4,7 @@ localhost:8080/about should take users to about.html
 localhost:8080/contact-me should take users to contact-me.html
 404.html should display any time the user tries to go to a page not listed above.
 
-How tf do I do that
+How do I do that
 
 Docs:
 - Reading files with node - https://nodejs.org/en/learn/manipulating-files/reading-files-with-nodejs
@@ -13,3 +13,16 @@ Docs:
 
 I need:
 index, about, contact-me, 404 routing
+
+
+
+CONTROLLERS
+
+A controllers comes into play when a request hits the server and a route matches the requested HTTP verb and path
+
+The route determines which controller should handle the request based on the defined middleware chain
+
+Once the controller completes it's tasks, it passes the processed data to the view
+The view then renders something suitable to send back to the client
+
+We have the function that pulls the database information separated from the actual database pull function so we can group the functions together into a 'class', making calls to the database look like: authorController.getAuthorById()
